@@ -1,0 +1,71 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>WordCount.site - Character, Word, Sentence, Paragraph Counts & Calculations</title>
+	<meta name="description" content="Simple, live character and word counts as you type. Great for papers, essays, SEO, anything else you could ever need to count.">
+	<meta name="author" content="Nicholas Quinlan">
+
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+
+<div id="behind"></div>
+
+
+<aside id="ads"></aside>
+
+<div class="expandingArea">
+	<pre id="expander"><span></span><br></pre>
+	<textarea role="main" id="StatText">Start typing or paste your text…</textarea>
+</div>
+<aside id="statistics">
+	<h2>Counts</h2>
+	<table>
+		<tr><td>Characters:</td><td class="stat_data c_character"></td></tr>
+		<tr><td>Words:</td><td class="stat_data c_word"></td></tr>
+		<tr><td>Sentences:</td><td class="stat_data c_sentence"></td></tr>
+		<tr><td>Paragraphs:</td><td class="stat_data c_paragraph"></td></tr>
+	</table>
+	<h2 class="distracting">Calculations</h2>
+	<table class="distracting">
+		<tr><td>Characters per Word:</td><td class="stat_data c_cpw"></td></tr>
+		<tr><td>Characters per Sentence:</td><td class="stat_data c_cps"></td></tr>
+		<tr><td>Characters per Paragraph:</td><td class="stat_data c_cpp"></td></tr>
+		<tr><td>Words per Sentence:</td><td class="stat_data c_wps"></td></tr>
+		<tr><td>Words per Paragraph:</td><td class="stat_data c_wpp"></td></tr>
+		<tr><td>Sentences per Paragraph:</td><td class="stat_data c_spp"></td></tr>
+	</table>
+
+	<div id="social">
+		<iframe id="facebook_like" src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2FTextSt.at%2F&amp;send=false&amp;layout=button_count&amp;width=95&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:21px;" allowTransparency="true"></iframe>
+		<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://TextSt.at/" data-text="This counts text so you don't have to." data-related="n_quinlan">Tweet</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	</div>
+</aside>
+
+
+<div id="credit">
+	<div>Created By <a href="http://nicholasquinlan.com/">Nick Quinlan</a> (<a href="http://twitter.com/YayNickQ" rel="author">@YayNickQ</a>)</div>
+	<a href="http://nicholasquinlan.com/"><img src="http://etc.nicholasquinlan.com/stuff/avatars/q/square-32.png" alt="About" /></a>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+
+
+<script src="js/script.js"></script>
+<script>
+	var _gaq=[['_setAccount','UA-31190332-1'],['_trackPageview']];
+	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+	g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+	s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+ul, li, textarea, pre { margin: 0; padding: 0; outline: 0; border: 0;}
+table { border-collapse: collapse; border-spacing: 0; }
+a img { border: 0; }
+
+::-moz-selection { background: #575757; color: #fff; text-shadow: none; }
+::selection { background: #575757; color: #fff; text-shadow: none; }
+
+body {
+	background-color: #e9e9e9;
+	font-family: 'Averia Serif', 'Cochin', 'Garamond', 'Times', serif;
+}
+a {
+	color: #575757;
+}
+#ads { display: none; }
+
+#statistics {
+	background: transparent;
+}
+#statistics h2:first-child {
+	margin-top: 2px;
+}
+#statistics ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#statistics ul li {
+	clear: both;
+	margin: 2px 0;
+}
+#statistics table {
+	width: 100%;
+}
+#statistics table td.stat_data {
+	color: #444;
+	text-align: right;
+}
+
+.expandingArea {
+	position: relative;
+	max-width: 100%;
+}
+.expandingArea > textarea,
+.expandingArea > pre {
+	padding: 5px 5px 50px 5px;
+	background: transparent;
+	font-family: inherit;
+	font-size: 1.6em;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	/* Make the text soft-wrap */
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+.expandingArea > textarea {
+	/* The border-box box model is used to allow
+	 * padding whilst still keeping the overall width
+	 * at exactly that of the containing element.
+	 */
+	-webkit-box-sizing: border-box;
+		 -moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+					box-sizing: border-box;
+	width: 100%;
+	/* This height is used when JS is disabled */
+	height: 100px;
+}
+.expandingArea.active > textarea {
+	/* Hide any scrollbars */
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	/* Remove WebKit user-resize widget */
+	resize: none;
+}
+.expandingArea > pre {
+	display: none;
+}
+.expandingArea.active > pre {
+	display: block;
+	/* Hide the text; just using it for sizing */
+	visibility: hidden;
+}
+
+#social {
+  margin-top: 25px;
+}
+
+#behind {
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: fixed;
+}
+
+#credit {
+  text-align: right;
+}
+#credit div {
+	padding: 10px;
+	border-radius: 10px 0 0 10px;
+	color: #FFF;
+	background-color: black;
+	font-size: .9em;
+	font-weight: 200;
+  margin: 10px -10px 10px 0;
+	-moz-transition: all .25s .25s;
+	-webkit-transition: all .25s .25s;
+	transition: all .25s .25s;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  filter: alpha(opacity=70);
+  opacity: .7;
+}
+
+#credit div a {
+	color: #2da9ec;
+}
+@media only screen and (min-width: 600px) {
+  .expandingArea {
+    width: auto;
+    margin-right: 260px;
+  }
+  #statistics {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 240px;
+  }
+  #credit {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 32px;
+    height: 32px;
+  }
+  #credit div {
+    position: absolute;
+    top: -90px;
+    right: -10px;
+    width: 250px;
+    margin: 0;
+    visibility: hidden;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+  }
+  #credit:hover div {
+    visibility: visible;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    filter: alpha(opacity=70);
+    opacity: .7;
+  }
+  #credit div:after {
+    content:"";
+    position:absolute;
+    bottom:-15px; /* value = - border-top-width - border-bottom-width */
+    left:229px; /* controls horizontal position */
+    border-width:15px 15px 0; /* vary these values to change the angle of the vertex */
+    border-style:solid;
+    border-color:#000 transparent;
+    /* reduce the damage in FF3.0 */
+    display:block; 
+    width:0;
+  }
+}
+@media only screen and (min-width: 850px) {
+  .expandingArea {
+    width: 600px;
+  }
+}
+@media only screen and (min-width: 1120px) {
+  .expandingArea {
+    margin: 0 auto;
+  }
+  #statistics {
+    left: 50%;
+    margin-left: 320px;
+  }
+}
+@media only screen and (min-width: 1220px) {
+  #ads {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    margin-left: -620px;
+    width: 300px;
+  }
+  #ads.activated {
+    display: block;
+  }
+}
