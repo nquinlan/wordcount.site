@@ -72,15 +72,6 @@ function charCount(object) {
 		$("#statistics .stat_data.c_" + key).text(value);
 	});
 
-	// ADS
-	if(stats.word >= 100 && !$("#ads .ad").length) {
-		$("#ads").append('<a href="http://tr.grammarly.com/aff_c?offer_id=3&aff_id=1490&file_id=22&source=TextSt.at" target="_blank" class="ad"><img src="http://media.go2speed.org/brand/files/grammarly/3/300x250_en.png" width="300" height="250" border="0" /></a><img src="http://tr.grammarly.com/aff_i?offer_id=3&aff_id=1490&file_id=22" width="1" height="1">').fadeIn(1000,function () {
-			$("#ads").addClass("activated").css("display", "");
-			$("#ads :last-child").click(function () {
-				_gaq.push(['_trackEvent', 'Ad', 'Affiliate', 'Grammarly', stats.word]);
-			});
-		});
-	}
 }
 
 $(function() {
